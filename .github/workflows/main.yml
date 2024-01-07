@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: lts/*
         
-
       - name: Installing dependencies 📦️
         run: npm install
 
