@@ -23,7 +23,7 @@ jobs:
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
-          command: up
+          command: up --refresh --yes --non-interactive
           stack-name: dev
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
