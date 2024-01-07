@@ -1,0 +1,11 @@
+{
+    "name": "awesome-azure",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/azure-native": "^2.24.0",
+        "@pulumi/pulumi": "^3.0.0"
+    }
+}
