@@ -24,7 +24,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           enable-AzPSSession: true
-
+          
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
