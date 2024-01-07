@@ -20,10 +20,17 @@ jobs:
       - name: Installing dependencies 📦️
         run: npm install
 
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          enable-AzPSSession: true
+
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
           command: up
           stack-name: dev
+          work-dir: pulumi-azure-infra-deploy
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
