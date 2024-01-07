@@ -15,10 +15,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: yarn
+        
 
       - name: Installing dependencies 📦️
-        run: yarn install
+        run: npm install
 
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
